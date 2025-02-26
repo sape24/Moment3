@@ -1,0 +1,35 @@
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    img{
+        width: 300px;
+        height: auto;
+    }
+}
+
+.mobilemenu{
+    display: none;
+}
+
+@media  (max-width: 800px){ 
+    .desktopmenu{
+        display: none;
+    }
+
+    .menu-btn{ 
+        display:block;
+        display: flex !important;
+        right: 5%;
+    }
+
+    .mobilemenu{
+        display: none;
+    }
+
+    header img{
+        width: 200px;
+    }
+}

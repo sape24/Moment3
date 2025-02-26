@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "MyFont";
+    src: url("../Amaranth-Regular.ttf") format("truetype");
+}
+
+$font-stack: 'MyFont';
+$primary-color: #03624c;
+$secondary-color: #00df82;
+$primarydark-color: darken($primary-color, 40%);
+
+
+*{
+    font-family: $font-stack;
+}
+
+header{
+    background-color: $primary-color;
+}
+
+.mobilemenu{
+    background-color: $primary-color;
+    ul{
+        list-style-type: none;
+    }  
+}
+
+.menu-btn{
+    background-color: $primary-color;
+    cursor: pointer;
+}
+
+.bars{
+    background-color: white;
+}
+
+.desktopmenu{
+    ul{
+        list-style-type: none;
+    }
+}
