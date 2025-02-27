@@ -13,25 +13,74 @@
   font-family: MyFont;
 }
 
-header, .mobilemenu {
-  background-color: #03624c;
-}
-
-.mobilemenu ul {
-  list-style-type: none;
-}
-
-.menu-btn {
-  cursor: pointer;
-  background-color: #03624c;
-}
-
-.bars {
-  background-color: #fff;
-}
-
 .desktopmenu ul {
   list-style-type: none;
+}
+
+@media (prefers-color-scheme: light) {
+  header {
+    background-color: #03624c;
+  }
+
+  .menu-btn {
+    background-color: #03624c;
+    border: 2px solid #fff;
+  }
+
+  .mobilemenu {
+    background-color: #03624c;
+  }
+
+  .mobilemenu a, * {
+    color: #fff;
+  }
+
+  .bars {
+    background-color: #fff;
+  }
+
+  .menu-text, .desktopmenu a {
+    color: #fff;
+  }
+
+  #indexarticle {
+    background-color: #03624c;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  header {
+    background-color: #000;
+  }
+
+  * {
+    color: #00df82;
+  }
+
+  .bars {
+    background-color: #00df82;
+  }
+
+  .menu-btn {
+    background-color: #000;
+    border: 2px solid #00df82;
+  }
+
+  .mobilemenu {
+    background-color: #000;
+  }
+
+  .mobilemenu a, .menu-text, .desktopmenu a {
+    color: #00df82;
+  }
+
+  body {
+    background-color: gray;
+  }
+
+  #indexarticle {
+    background-color: #000;
+  }
 }
 
 header {
@@ -43,8 +92,8 @@ header {
 }
 
 header img {
-  width: 300px;
-  height: auto;
+  width: 500px;
+  padding: 10%;
 }
 
 .mobilemenu {
@@ -68,7 +117,26 @@ header img {
 
   header img {
     width: 200px;
+    padding-right: 0;
   }
+}
+
+#contentgrid {
+  flex-direction: column;
+  place-items: center;
+  width: 100%;
+  padding: 5%;
+  display: flex;
+}
+
+#indexarticle {
+  border-radius: 20px;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 30em;
+  padding: 6%;
+  font-size: 1.4em;
+  display: flex;
 }
 
 .mobilemenu {
@@ -86,6 +154,7 @@ header img {
   text-align: center;
   width: 100%;
   padding: 0;
+  list-style-type: none;
 }
 
 .mobilemenu li {
@@ -95,21 +164,20 @@ header img {
 }
 
 .mobilemenu a {
-  color: #fff;
   padding: 1%;
   font-size: 1.2rem;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .menu-btn {
-  border: 2px solid #fff;
+  cursor: pointer;
   align-items: center;
   padding: 8px 15px;
   display: none;
 }
 
 .menu-btn .menu-text {
-  color: #fff;
   margin-left: 10px;
   font-size: 1.5em;
   font-weight: bold;
@@ -155,9 +223,9 @@ header img {
 }
 
 .desktopmenu a {
-  color: #fff;
   white-space: nowrap;
   font-size: 1.6em;
   font-weight: bold;
+  text-decoration: none;
 }
 /*# sourceMappingURL=index.8c1c22dc.css.map */

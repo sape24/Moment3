@@ -5,8 +5,8 @@ header{
     width: 100%;
     max-width: 100%;
     img{
-        width: 300px;
-        height: auto;
+        width: 500px;
+        padding: 10%;
     }
 }
 
@@ -31,5 +31,24 @@ header{
 
     header img{
         width: 200px;
+        padding-right: 0;
     }
+}
+
+#contentgrid{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    place-items: center;
+    padding: 5%;
+}
+
+#indexarticle{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 30em;
+    padding: 6%;
+    border-radius: 20px;
+    font-size: 1.4em;
 }
