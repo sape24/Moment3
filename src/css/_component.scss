@@ -52,6 +52,11 @@
     padding: 10px 15px
 }
 
+.crosstyle{
+    width: 25px; 
+    position: relative;
+}
+
 .menu-icon{
     margin-right: 10px;
     
@@ -63,16 +68,14 @@
     }
 
     .cross1{
-        width: 25px;    
+        @extend .crosstyle;   
         transform: rotate(45deg);
-        position: relative;
         top: 5px;
     }
 
     .cross2{
-        width: 25px; 
+        @extend .crosstyle;  
         transform: rotate(135deg);
-        position: relative;
         top: -3px;
     }
 }

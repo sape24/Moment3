@@ -7,9 +7,10 @@
 
 $font-stack: 'MyFont';
 $primary-color: #03624c;
-$secondary-color: #00df82;
+$secondary-color: color.scale($primary-color, $lightness: +100%);
 $primarydark-color: color.scale($primary-color, $lightness: -100%);
-
+$secondarydark-color: #00df82;
+$darkbackground: false;
 *{
     font-family: $font-stack;
 }
@@ -20,6 +21,14 @@ $primarydark-color: color.scale($primary-color, $lightness: -100%);
     }
 }
 
+@mixin text-color($darkbackground: false){
+    @if $darkbackground{
+        color: $secondarydark-color;
+    } @else{
+        color: $secondary-color;
+    }
+}
+
 @mixin light-theme{
     header{
         background-color: $primary-color;
@@ -27,31 +36,19 @@ $primarydark-color: color.scale($primary-color, $lightness: -100%);
 
     .menu-btn{
         background-color: $primary-color;
-        border: 2px solid white;
+        border: 2px solid $secondary-color;
     }
 
     .mobilemenu{
         background-color: $primary-color;  
     }
-
-    .mobilemenu a{
-        color: white; 
-    }
-
-    *{
-        color: white;
+    
+    .mobilemenu a, .menu-text, .desktopmenu a, p, h1{
+        @include text-color(false);
     }
 
     .bars{
-        background-color: white;
-    }
-
-    .menu-text{
-        color: white; 
-    }
-
-    .desktopmenu a{
-        color: white;
+        background-color: $secondary-color;
     }
 
     #indexarticle{
@@ -68,34 +65,22 @@ $primarydark-color: color.scale($primary-color, $lightness: -100%);
         background-color: $primarydark-color;
     }
     
-    *{
-        color: $secondary-color;
+     .mobilemenu a, .menu-text, .desktopmenu a, p, h1{
+        @include text-color(true);
     }
 
     .bars{
-        background-color: $secondary-color;
+        background-color: $secondarydark-color;
     }
 
     .menu-btn{   
-        border: 2px solid $secondary-color;
+        border: 2px solid $secondarydark-color;
         background-color: $primarydark-color;
     }
 
     .mobilemenu{
         background-color: $primarydark-color;  
     }
-
-    .mobilemenu a{
-        color: $secondary-color
-    }
-
-    .menu-text{
-        color: $secondary-color; 
-    }
-
-    .desktopmenu a{
-        color: $secondary-color;
-    } 
 
     body{
         background-color: gray;
